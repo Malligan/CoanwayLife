@@ -6,7 +6,8 @@
     {
         static void Main(string[] args)
         {
-            var lm = new LifeManager(500);
+            ConsoleLifeInintalizer consoleLifeInintalizer = new ConsoleLifeInintalizer();
+            var lm = consoleLifeInintalizer.InitalizeLifeManager();
 
             lm.Start();
 

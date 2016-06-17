@@ -23,14 +23,17 @@
             FieldList = arr;
         }
 
-        /*
-         * 1 2 3
-         * 4 x 5
-         * 6 7 8
-         */
+        
 
         public IList<int> GetSibilings(int line, int column)
         {
+
+            /*
+             * 1 2 3
+             * 4 x 5
+             * 6 7 8
+             */
+
             var line123 = line == 0 ? Lines - 1 : line - 1;
             var line45 = line;
             var line678 = line == Lines - 1 ? 0 : line + 1;
@@ -41,14 +44,14 @@
 
             IList<int> result = new List<int>(8);
 
-            result.Add(FieldList[line123, column146]);
-            result.Add(FieldList[line123, column27]);
-            result.Add(FieldList[line123, column358]);
-            result.Add(FieldList[line45, column146]);
-            result.Add(FieldList[line45, column358]);
-            result.Add(FieldList[line678, column146]);
-            result.Add(FieldList[line678, column27]);
-            result.Add(FieldList[line678, column358]);
+            result.Add(FieldList[line123,   column146]);
+            result.Add(FieldList[line123,   column27]);
+            result.Add(FieldList[line123,   column358]);
+            result.Add(FieldList[line45,    column146]);
+            result.Add(FieldList[line45,    column358]);
+            result.Add(FieldList[line678,   column146]);
+            result.Add(FieldList[line678,   column27]);
+            result.Add(FieldList[line678,   column358]);
 
             return result;
         }
